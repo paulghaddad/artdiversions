@@ -1,3 +1,4 @@
 name: ArtDiversions
 markdown: redcarpet
 pygments: true
+baseurl: /artdiversions

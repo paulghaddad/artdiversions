@@ -40,7 +40,12 @@
   }
 }
 
-// Base link fonts
+// Base fonts
+
+html {
+  @include font(default);
+}
+
 
 a {
 
