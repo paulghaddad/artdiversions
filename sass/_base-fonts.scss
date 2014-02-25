@@ -1,5 +1,13 @@
 //HTML level font declarations are in the styles.scss file
 
+.wf-loading {
+    font-family: "droid-sans";
+    visibility: hidden;
+  }
+  .wf-active {
+    visibility: visible;
+  }
+
 // Mixin to produce font-size in rem and, for fallback
 
 @mixin font-size($sizeValue: 1) {
@@ -18,6 +26,11 @@
   @else if $font == prox {
     font-family: "proxima-nova",sans-serif;
     font-style: normal;
+    font-weight: 400;
+  }
+  @else if $font == kep-it {
+    font-family: "kepler-std",serif;
+    font-style: italic;
     font-weight: 400;
   }
   @else {

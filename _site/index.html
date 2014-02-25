@@ -1,90 +1,183 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Your New Jekyll Site</title>
-        <meta name="viewport" content="width=device-width">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ArtDiversions Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/build/main.css">
+    <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 
-    </head>
-    <body>
+    <script type="text/javascript">
+      (function(d) {
+        var config = {
+          kitId: 'pwp6wqk',
+          scriptTimeout: 3000
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">Your New Jekyll Site</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+  </head>
 
-          <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body role="document">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      <div class="grid grid-pad">
 
-        <link rel="stylesheet" href="css/build/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <header class="main-header" role="banner">
+              <h1>ArtDiversions</h1>
+              <p>Happy Tuesday.</p>
+              <h2><span>You're reading </span><a href="">Signal vs. Noise</a><span class="media-beta">, a publication about the web</span> <span class="media-alpha"><a href="">by 37signals</a></span><span> since 1999.</span></h2>
+              
+        </header>
 
-        <div id="home">
-          <h1>Blog Posts</h1>
-          <ul class="posts">
-            
-              <li><span>19 Feb 2014</span> &raquo; <a href="/jekyll/update/2014/02/19/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
-            
-          </ul>
-        </div>
+  <section class="blog-posts" role="main">
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/build/production.min.js"></script>
+    
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-    </body>
-</html>
+  <article class="post module">
+
+    <h1><a href="/2014/02/19/welcome-to-jekyll.html" title="post.title">Server generated web responses</a></h1>
+
+        <h2><em><a href="author-link">David</a> wrote this on <time datetime="2014-01-21">Jan 21, 2014</time> / <a href="">13 Comments</a></em></h2> 
+
+    <p>The majority of Ajax operations in Basecamp are handled with Server-generated JavaScript Responses (SJR). It works like this:</p>
+
+    <ol>
+        <li>Form is submitted via a XMLHttpRequest-powered form.</li>
+        <li>Server creates or updates a model object.</li>
+        <li>Server generates a JavaScript response that includes the updated HTML template for the model.</li>
+        <li>Client evaluates the JavaScript returned by the server, which then updates the DOM.</li>
+    </ol>
+
+    <p>This simple pattern has a number of key benefits.</p>
+
+    <h3>Benefit #1: Reuse templates without sacrificing performance</h3>
+
+    <p>You get to reuse the template that represents the model for both first-render and subsequent updates. In Rails, you’d have a partial like messages/message that’s used for both cases.</p>
+
+    <p>If you only returned JSON, you’d have to implement your templates for showing that message twice (once for first-response on the server, once for subsequent-updates on the client) — unless you’re doing a single-page JavaScript app where even the first response is done with JSON/client-side generation.</p>
+
+    <p>That latter model can be quite slow, since you won’t be able to display anything until your entire JavaScript library has been loaded and then the templates generated client-side. (This was the model that Twitter originally tried and then backed out of). But at least it’s a reasonable choice for certain situations and doesn’t require template duplication.</p>
+
+    <h3>Benefit #2: Less computational power needed on the client</h3>
+
+    <p>While the JavaScript with the embedded HTML template might result in a response that’s marginally larger than the same response in JSON (although that’s usually negligible when you compress with gzip), it doesn’t require much client-side computation to update.</p>
+
+    <p>This means it might well be faster from an end-to-end perspective to send JavaScript+HTML than JSON with client-side templates, depending on the complexity of those templates and the computational power of the client. This is double so because the server-generated templates can often be cached and shared amongst many users (see Russian Doll caching).</p>
+
+    <h3>Benefit #3: Easy-to-follow execution flow</h3>
+
+    <p>It’s very easy to follow the execution flow with SJR. The request mechanism is standardized with helper logic like form_for @post, remote: true. There’s no need for per-action request logic. The controller then renders the response partial view in exactly the same way it would render a full view, the template is just JavaScript instead of straight HTML.</p>
+
+    <h3>Complete example</h3>
+
+    <p>0) First-use of the message template.</p>
+
+    <p>1) Form submitting via Ajax.</p>
+
+    <p>2) Server creates the model object.</p>
+
+    <p>3) Server generates a JavaScript response with the HTML embedded.</p>
+
+    <p>The final step of evaluating the response is automatically handled by the XMLHttpRequest-powered form generated by form_for, and the view is thus updated with the new message and that new message is then highlighted via a JS/CSS animation.</p>
+
+    <h3>Beyond RJS</h3>
+
+    <p>When we first started using SJR, we used it together with a transpiler called RJS, which had you write Ruby templates that were then turned into JavaScript. It was a poor man’s version of CoffeeScript (or Opalrb, if you will), and it erroneously turned many people off the SJR pattern.</p>
+
+    <p>These days we don’t use RJS any more (the generated responses are usually so simple that the win just wasn’t big enough for the rare cases where you actually do need something more complicated), but we’re as committed as ever to SJR.</p>
+
+    <p>This doesn’t mean that there’s no place for generating JSON on the server and views on the client. We do that for the minority case where UI fidelity is very high and lots of view state is maintained, like our calendar. When that route is called for, we use Sam’s excellent Eco template system (think ERB for CoffeeScript).</p>
+
+    <p>If your web application is all high-fidelity UI, it’s completely legit to go this route all the way. You’re paying a high price to buy yourself something fancy. No sweat. But if your application is more like Basecamp or Github or the majority of applications on the web that are proud of their document-based roots, then you really should embrace SJR with open arms.</p>
+
+    <p>The combination of Russian Doll-caching, Turbolinks, and SJR is an incredibly powerful cocktail for making fast, modern, and beautifully coded web applications. Enjoy!</p>
+
+    
 
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
+
+  </article>
+
+
+
+  <nav class="arrows module clearfix">
+    <p class="col-1-2"><a href="">Older Posts</a></p>
+    <p class="col-1-2"><a href="">Newer Posts</a></p>
+</nav>
+
+
+  </section>
+
+        <footer class="main-footer">
+
+          <nav role="navigation">
+              <p>Explore Signal vs. Noise</p>
+                  <ul>
+                      <li><a href="business" title="Business">Business</a></li>
+                      <li><a href="design" title="Design">Design</a></li>
+                      <li><a href="programming" title="Programming">Programming</a></li>
+                      <li><a href="support" title="Support">Support</a></li>
+                      <li><a href="sysadmin" title="SysAdmin">SysAdmin</a></li>
+                      <li><a href="writing" title="Writing">Writing</a></li>
+                      <li><a href="best" title="Best Of">Best Of</a></li>
+                      <li><a href="everything" title="Everything">Everything</a></li>
+                  </ul>
+          </nav>
+
+          <section class="hits clearfix module" role="complementary">
+            <div class="best-posts col-1-2">
+                <p><span>New here?</span> Start with our hits:</p>
+                <ul>
+                    <li><a href="">It just doesn't matter</a></li>
+                    <li><a href="">Writing decisions: saving space without losing meaning</a></li>
+                    <li><a href="">How to get good at making money</a></li>
+                    <li><a href="">Forget passion, focus on process</a></li>
+                    <li><a href="">Give it five minutes</a></li>
+                </ul>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
+            <div class="new-posts col-1-2">
+                <p><span>Back again?</span> Catch our latest:</p>
+                <ul>
+                    <li><a href="">The person you could be hiring</a></li>
+                    <li><a href="">Everyone does everything</a></li>
+                    <li><a href="">Guess what these Google icons do</a></li>
+                    <li><a href="">Healthy benefits for the long run</a></li>
+                    <li><a href="">Remote Works: IT Collective</a></li>
+                </ul>
             </div>
-          </div>
-        </div>
+          </section>
 
-    </body>
+          <section class="footer-bottom module" role="contentinfo">
+            <p>Want to learn how to design, code, and ship web apps with Ruby on Rails? Join The Starter League.</p>
+            <nav>Meet the writers of Signal vs. Noise. Follow 37signals on Twitter. Subscribe to our Newsletter and RSS.</nav>
+            <p>Content copyright &copy;1999-2014 37signals, LLC.</p>
+            <p>Happy Tuesday.</p>
+          </section>
+
+      </footer>
+
+      </div> <!-- .page-wrap -->
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+      <script src="/js/build/production.min.js"></script>
+
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='//www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','UA-XXXXX-X');ga('send','pageview');
+      </script>
+
+  </body>
 </html>

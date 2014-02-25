@@ -1,5 +1,5 @@
 body {
-  //min-width: 22rem; // Set if a min-width is needed
+  min-width: 22rem; // Set if a min-width is needed
 }
 
 //Float all columns to the left
@@ -19,6 +19,10 @@ body {
   // padding values of grid elements
   > section, > footer {
       padding: $pad 5% $pad*2 5%;
+
+      @include bp(alpha) {
+        padding: $pad 8%;
+      }
   }
 
 }
@@ -47,4 +51,8 @@ body {
 
 
 // Insert any exceptions here
+
+.arrows .col-1-2 {
+  width: 50%;
+}
 
