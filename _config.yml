@@ -2,3 +2,7 @@ name: ArtDiversions
 markdown: redcarpet
 pygments: true
 baseurl: /artdiversions
+
+paginate_path: "/page:num"
+paginate: 3
+excerpt_separator: ""

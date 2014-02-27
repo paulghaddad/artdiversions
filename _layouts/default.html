@@ -4,7 +4,21 @@
 
     {{ content }}
 
-  {% include navigation.html %}
+  <nav class="arrows module clearfix">
+
+    {% if paginator.total_pages > 1 %}
+      {% if paginator.previous_page %}
+        <p class="col-1-2"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts</a></p>
+      {% endif %}
+
+      {% if paginator.next_page %}
+        <p class="col-1-2"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts</a></p>
+      {% endif %}
+    {% endif %}
+    
+
+
+  </nav>
 
 
   </section>
