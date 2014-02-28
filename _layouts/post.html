@@ -6,7 +6,7 @@ layout: default
 
     <h1>{{ page.title }} </h1>
 
-    <h2><em><a href="author-link">{{ page.author }}</a> wrote this on <time datetime="2014-01-21">Jan 21, 2014</time> / <a href="">13 Comments</a></em></h2> 
+    <h2><em><a href="author-link">{{ page.author }}</a> wrote this on <time datetime="2014-01-21">{{ page.date | date_to_long_string }}</time></h2> 
 
     {{ content }}
 
