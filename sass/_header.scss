@@ -20,16 +20,6 @@
     margin: 0;
     opacity: .6;
   }
-  p {
-    display: none;
-    margin: 0;
-    @include font(prox);
-    color: $light-gray;
-
-    @include bp(gamma) {
-        display: inline-block;
-      }    
-    }
 
   h2 {
     display: inline-block;
@@ -53,6 +43,10 @@
   
   span {
     display: none;
+    @include bp(beta) {
+      display: inline;
+    }
+
     &.media-alpha {
       @include bp(alpha) {
         display: inline;
