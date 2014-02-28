@@ -42,63 +42,21 @@
 
   <article class="post module">
 
-    <h1><a href="/2014/02/27/the-new-thing.html" title="post.title">The new thing</a></h1>
+    <h1><a href="/2014/02/27/the-new-thing.html" title="post.title">James Turrell: Creating a Perceptual Phenomenon</a></h1>
 
-        <h2><em><a href="author-link">David</a> wrote this on <time datetime="2014-01-21">Jan 21, 2014</time> / <a href="">13 Comments</a></em></h2> 
+    <h2><em><a href="author-link">Amy</a> wrote this on <time datetime="2014-01-21">Jan 21, 2014</time> / <a href="">13 Comments</a></em></h2> 
 
-    <p>The majority of Ajax operations in Basecamp are handled with Server-generated JavaScript Responses (SJR). It works like this:</p>
+        <p>James Turrell’s first solo exhibition at Pace Gallery in London, England, James Turrell: Recent Works, exemplifies the adage: “The longer you look, the more you see.”  Instead of objects, Turrell uses light and space to explore optics and perception.  This exhibition includes four installations that spans two floors, featuring two never-before-seen works from his Wide Glass series and two from the Tall Glass series.  Turrell’s use of technology, light and architecture culminates into a spellbinding phenomenological experience.</p>
 
-    <ol>
-        <li>Form is submitted via a XMLHttpRequest-powered form.</li>
-        <li>Server creates or updates a model object.</li>
-        <li>Server generates a JavaScript response that includes the updated HTML template for the model.</li>
-        <li>Client evaluates the JavaScript returned by the server, which then updates the DOM.</li>
-    </ol>
+    <p>James Turrell: Recent Works is an escape from the fast-paced contemporary world; walking into the dimly lit gallery underscores the entrance into a subliminal space.  The gallery lighting is critical: it creates a meditative atmosphere conducive for the reception of the brilliant colors emanating from Turrell’s work.  The juxtaposition of colors—shades of yellow, green, blue, purple, pink, among others—may seem unusual in another context, but the blending and metamorphosizing of these colors and shapes is not only visually captivating, but also conjures notions of time and ephemerality.  Pelée, for example, changes from a motif of three floating shapes of white, pink and red towards a glow of solid white.  The perception of color is further dependent on the viewer’s spatial relation to the work: standing near, from afar or to the side.  Moving around the installation is inevitable; part of the exciting part of a Turrell exhibition is trying to uncover how the pieces were made.  Kermandec and Pelée, for example, use LED lights and a curved aperture to create a mesmerizing optical experience.</p>
 
-    <p>This simple pattern has a number of key benefits.</p>
+    <p>Each of the three installations presented linearly in the ground floor gallery are contained in individual spaces with three walls, allowing for separate transcendental experiences. Kermandec and Pelée (2014), from Turrell’s Wide Glass series, resemble large, horizontal plasma-screen televisions built into a curved wall, emitting a soft glow of colored light.  The rounded corners of Kermandec and Pelée match the curved wall.  Sojourn (2006) and Sensing Thought (2005) from the Tall Glass series offer a similar sensorial experience but consist of vertical rectangles with angular corners, also matching the walls of their contained spaces.  This detail alone—the corners of the artwork match the architectural setting—underscores Turrell’s attention to visual and architectural aesthetics.  The motif of color and light continues even when moving between installations: the color emitted from each piece reverberates on the gallery’s white walls.  The huge fields of color that fill the space entices the viewer to enter and explore the installation, to participate in this perceptual experience.</p>
 
-    <h3>Benefit #1: Reuse templates without sacrificing performance</h3>
+    <p>The contemplative environment and the subdued floating shapes of color are reminiscent of the abstract expressionist, Mark Rothko.  Both artists use color and large dimensions to encompass the viewer environmentally, tacitly asking for viewer participation: viscerally and sensorially. Indeed, this is the crux of Turrell’s exhibition: the viewer’s affective perception of color and light over time.  What appears so simple, is indeed very powerful.  Color is personal and subjective: everyone perceives color differently.  Using colored light as his medium, Turrell implicitly asks for the viewer to look, explore and question.  Indeed, the more time spent with the artwork, and in the exhibition, the greater the opportunity to experience the unfolding nature of color and light.
+    </p>
 
-    <p>You get to reuse the template that represents the model for both first-render and subsequent updates. In Rails, you’d have a partial like messages/message that’s used for both cases.</p>
-
-    <p>If you only returned JSON, you’d have to implement your templates for showing that message twice (once for first-response on the server, once for subsequent-updates on the client) — unless you’re doing a single-page JavaScript app where even the first response is done with JSON/client-side generation.</p>
-
-    <p>That latter model can be quite slow, since you won’t be able to display anything until your entire JavaScript library has been loaded and then the templates generated client-side. (This was the model that Twitter originally tried and then backed out of). But at least it’s a reasonable choice for certain situations and doesn’t require template duplication.</p>
-
-    <h3>Benefit #2: Less computational power needed on the client</h3>
-
-    <p>While the JavaScript with the embedded HTML template might result in a response that’s marginally larger than the same response in JSON (although that’s usually negligible when you compress with gzip), it doesn’t require much client-side computation to update.</p>
-
-    <p>This means it might well be faster from an end-to-end perspective to send JavaScript+HTML than JSON with client-side templates, depending on the complexity of those templates and the computational power of the client. This is double so because the server-generated templates can often be cached and shared amongst many users (see Russian Doll caching).</p>
-
-    <h3>Benefit #3: Easy-to-follow execution flow</h3>
-
-    <p>It’s very easy to follow the execution flow with SJR. The request mechanism is standardized with helper logic like form_for @post, remote: true. There’s no need for per-action request logic. The controller then renders the response partial view in exactly the same way it would render a full view, the template is just JavaScript instead of straight HTML.</p>
-
-    <h3>Complete example</h3>
-
-    <p>0) First-use of the message template.</p>
-
-    <p>1) Form submitting via Ajax.</p>
-
-    <p>2) Server creates the model object.</p>
-
-    <p>3) Server generates a JavaScript response with the HTML embedded.</p>
-
-    <p>The final step of evaluating the response is automatically handled by the XMLHttpRequest-powered form generated by form_for, and the view is thus updated with the new message and that new message is then highlighted via a JS/CSS animation.</p>
-
-    <h3>Beyond RJS</h3>
-
-    <p>When we first started using SJR, we used it together with a transpiler called RJS, which had you write Ruby templates that were then turned into JavaScript. It was a poor man’s version of CoffeeScript (or Opalrb, if you will), and it erroneously turned many people off the SJR pattern.</p>
-
-    <p>These days we don’t use RJS any more (the generated responses are usually so simple that the win just wasn’t big enough for the rare cases where you actually do need something more complicated), but we’re as committed as ever to SJR.</p>
-
-    <p>This doesn’t mean that there’s no place for generating JSON on the server and views on the client. We do that for the minority case where UI fidelity is very high and lots of view state is maintained, like our calendar. When that route is called for, we use Sam’s excellent Eco template system (think ERB for CoffeeScript).</p>
-
-    <p>If your web application is all high-fidelity UI, it’s completely legit to go this route all the way. You’re paying a high price to buy yourself something fancy. No sweat. But if your application is more like Basecamp or Github or the majority of applications on the web that are proud of their document-based roots, then you really should embrace SJR with open arms.</p>
-
-    <p>The combination of Russian Doll-caching, Turbolinks, and SJR is an incredibly powerful cocktail for making fast, modern, and beautifully coded web applications. Enjoy!</p>
-
+    <p><em>“James Turrell: Recent Works” is on show at Pace London, 6 Burlington Gardens, London, W1S 3ET, until 5 April 2014.</em></p>
+    
     
 
 
@@ -111,9 +69,9 @@
 
     <h1><a href="/2014/02/26/chicago-tech.html" title="post.title">Chicago Tech</a></h1>
 
-        <h2><em><a href="author-link">David</a> wrote this on <time datetime="2014-01-21">Jan 21, 2014</time> / <a href="">13 Comments</a></em></h2> 
+    <h2><em><a href="author-link">Amy</a> wrote this on <time datetime="2014-01-21">Jan 21, 2014</time> / <a href="">13 Comments</a></em></h2> 
 
-    <p>The majority of Ajax operations in Basecamp are handled with Server-generated JavaScript Responses (SJR). It works like this:</p>
+        <p>The majority of Ajax operations in Basecamp are handled with Server-generated JavaScript Responses (SJR). It works like this:</p>
 
     <ol>
         <li>Form is submitted via a XMLHttpRequest-powered form.</li>
@@ -178,9 +136,9 @@
 
     <h1><a href="/2014/02/25/37signals-does-it-again.html" title="post.title">37signals does it again</a></h1>
 
-        <h2><em><a href="author-link">David</a> wrote this on <time datetime="2014-01-21">Jan 21, 2014</time> / <a href="">13 Comments</a></em></h2> 
+    <h2><em><a href="author-link">Amy</a> wrote this on <time datetime="2014-01-21">Jan 21, 2014</time> / <a href="">13 Comments</a></em></h2> 
 
-    <p>The majority of Ajax operations in Basecamp are handled with Server-generated JavaScript Responses (SJR). It works like this:</p>
+        <p>The majority of Ajax operations in Basecamp are handled with Server-generated JavaScript Responses (SJR). It works like this:</p>
 
     <ol>
         <li>Form is submitted via a XMLHttpRequest-powered form.</li>
