@@ -18,23 +18,28 @@
 // Font-family mixins
 
 @mixin font($font) {
-  @if $font == prox-bold {
-    font-family: "proxima-nova",sans-serif;
+  @if $font == sans-bold {
+    font-family: "futura-pt",sans-serif;
     font-style: normal;
     font-weight: 700;
   }
-  @else if $font == prox {
-    font-family: "proxima-nova",sans-serif;
+  @else if $font == sans {
+    font-family: "futura-pt",sans-serif;
     font-style: normal;
     font-weight: 400;
   }
-  @else if $font == kep-it {
-    font-family: "kepler-std",serif;
+  @else if $font == serif-it {
+    font-family: "minion-pro",sans-serif;
     font-style: italic;
     font-weight: 400;
   }
+  @else if $font == serif-bold {
+    font-family: "minion-pro",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  }
   @else {
-    font-family: "kepler-std",serif;
+    font-family: "minion-pro",sans-serif;
     font-style: normal;
     font-weight: 400;
   }

@@ -11,7 +11,7 @@
     background: url(../../img/business.png) no-repeat top center;
     background-size: 13rem;
 
-    @include font(prox);
+    @include font(sans);
     @include font-size(1.75);
     letter-spacing: -1px;
     line-height: 1.25;
@@ -27,7 +27,7 @@
   }
 
   h2 {
-    @include font(kep-it);
+    @include font(serif-it);
     text-align: center;
     @include font-size(1);
     color: $very-light-gray;

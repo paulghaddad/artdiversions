@@ -35,7 +35,7 @@ footer {
           @include font-size(1.5);
           color: $off-teal;
           text-decoration: underline;
-          @include font(prox);
+          @include font(sans);
           &:hover {
             text-decoration: none;
             color: $dark-teal;
