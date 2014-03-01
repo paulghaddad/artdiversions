@@ -13,8 +13,8 @@
 
     @include font(sans);
     @include font-size(1.75);
-    letter-spacing: -1px;
-    line-height: 1.25;
+    letter-spacing: -.5px;
+    line-height: 1.2;
     &:hover {
       color: $off-teal;
       text-decoration: underline;
@@ -34,8 +34,7 @@
   }
 
   p {
-    margin: 0;
-    text-indent: 1rem;
+    margin: 1.2 rem 0;
   }
 
   h3 {
@@ -43,12 +42,12 @@
   }
 
   h3, p, ul, ol, figure, figcaption {
-    line-height: 1.5;
+    line-height: 1.6;
     @include font-size(1.1);
 
     @include bp(delta) {
       width: 40rem;
-      margin: 1rem auto;
+      margin: 1.2rem auto;
     }
   }
 

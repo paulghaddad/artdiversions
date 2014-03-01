@@ -19,12 +19,12 @@
 
 @mixin font($font) {
   @if $font == sans-bold {
-    font-family: "futura-pt",sans-serif;
+    font-family: "europa",sans-serif;
     font-style: normal;
     font-weight: 700;
   }
   @else if $font == sans {
-    font-family: "futura-pt",sans-serif;
+    font-family: "europa",sans-serif;
     font-style: normal;
     font-weight: 400;
   }
@@ -49,9 +49,13 @@
 
 html {
   @include font(default);
+  color: $body-black;
 }
 
 
 a {
-
+  text-decoration: none;
+  &:visited {
+    color: $header-black;
+  }
 }
