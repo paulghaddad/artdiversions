@@ -9,7 +9,7 @@ title: ArtDiversions Home
 
     <h1><a href="{{ site.baseurl }}{{ post.url }}" title="post.title">{{ post.title }}</a></h1>
 
-    <h2><em><time datetime="2014-01-21">{{ post.date | date_to_long_string }}</time></em></h2> 
+    <h2><em><time datetime="2014-01-21">By {{ post.author }} on {{ post.date | date_to_long_string }} in {{ post.location }}</time></em></h2> 
 
     {{ post.content }}
 

@@ -28,11 +28,9 @@
     @include font(sans);
     @include font-size(1);
       a {
-        color: $off-teal;
+        color: $dark-blue;
         text-decoration: underline;
-        &:hover {
-          text-decoration: none;
-        }
+        @include blue-hover;
       }
 
     @include bp(gamma) {

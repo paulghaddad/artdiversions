@@ -33,12 +33,12 @@ footer {
 
         a {
           @include font-size(1.5);
-          color: $off-teal;
+          color: $dark-blue;
           text-decoration: underline;
           @include font(sans);
           &:hover {
             text-decoration: none;
-            color: $dark-teal;
+            color: $hover-blue;
           }
         }
       }

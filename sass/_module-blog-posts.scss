@@ -15,9 +15,12 @@
     @include font-size(1.75);
     letter-spacing: -.5px;
     line-height: 1.2;
-    &:hover {
-      color: $off-teal;
-      text-decoration: underline;
+    a {
+      color: $header-black;
+      &:hover {
+        color: $dark-blue;
+        text-decoration: underline;
+      }
     }
 
     @include bp(delta) {
@@ -30,7 +33,8 @@
     @include font(serif-it);
     text-align: center;
     @include font-size(1);
-    color: $very-light-gray;
+    color: $charcoal;
+    text-transform: uppercase;
   }
 
   p {

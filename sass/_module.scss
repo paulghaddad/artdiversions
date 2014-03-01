@@ -3,3 +3,10 @@
 .module {
     padding: 1rem 0;
 }
+
+@mixin blue-hover {
+  &:hover {
+    text-decoration: none;
+    color: $hover-blue;
+  }
+}
