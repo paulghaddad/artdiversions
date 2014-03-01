@@ -6,6 +6,5 @@ _site/
 .DS_Store
 node_modules/
 css/.DS_Store
-img/
 favicon.ico
 apple-touch-icon-precomposed.png
