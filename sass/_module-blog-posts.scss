@@ -38,8 +38,12 @@
   }
 
   p {
-    margin: 1.2 rem 0;
     text-indent: 1.5rem;
+  }
+
+  cite {
+    display: block;
+    text-indent: 0;
   }
 
   blockquote {
@@ -58,7 +62,7 @@
     margin: 1rem 0 0 0;
   }
 
-  h3, p, ul, ol, figure, figcaption {
+  h3, p, ul, ol, figure, figcaption, cite {
     line-height: 1.6;
     @include font-size(1.1);
 
