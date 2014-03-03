@@ -6,3 +6,4 @@ baseurl: /artdiversions
 paginate_path: "/page:num"
 paginate: 3
 excerpt_separator: ""
+permalink: /:title/
