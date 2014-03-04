@@ -13,13 +13,6 @@
 
   h1 {
     @include image-replacement-text;
-    background: url(../../img/logo.svg) no-repeat;
-    background-size: 100px 24px;
-    width: 100px;
-    position: absolute;
-    right: 0;
-    margin: 0;
-    opacity: .6;
   }
 
   h2 {
