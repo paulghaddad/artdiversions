@@ -20,6 +20,7 @@
       &:hover {
         color: $dark-blue;
         text-decoration: underline;
+        @include link-transition;
       }
     }
 

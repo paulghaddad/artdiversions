@@ -11,7 +11,8 @@
   a {
     text-decoration: none;
     @include font-size(1.2);
-    @include font(prox);
+    @include font(sans);
     @include blue-hover;
+    @include link-transition;
   }
 }

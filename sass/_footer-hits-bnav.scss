@@ -35,6 +35,7 @@ footer {
         &:hover {
           color: $dark-blue;
           text-decoration: none;
+          @include link-transition;
         }
       }
     }

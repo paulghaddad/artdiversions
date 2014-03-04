@@ -20,7 +20,7 @@ footer {
         display: inline-block;
         padding: .4rem 0;
         &::after {
-          content: "/";
+          content: "";
           padding: 0 .3rem;
           @include font-size(1.5);
           color: $very-light-gray;
@@ -39,6 +39,7 @@ footer {
           &:hover {
             text-decoration: none;
             color: $hover-blue;
+            @include link-transition;
           }
         }
       }

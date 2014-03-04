@@ -31,6 +31,7 @@
         color: $dark-blue;
         text-decoration: underline;
         @include blue-hover;
+        @include link-transition;
       }
 
     @include bp(gamma) {

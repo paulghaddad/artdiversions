@@ -13,6 +13,7 @@ nav {
         &:hover {
           text-decoration: none;
           color: $hover-blue;
+          @include link-transition;
         }
       }
     }
