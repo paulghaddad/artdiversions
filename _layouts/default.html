@@ -8,11 +8,11 @@
 
     {% if paginator.total_pages > 1 %}
       {% if paginator.previous_page %}
-        <p class="col-1-2 old-arrow"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts</a></p>
+        <p class="col-1-2 old-arrow"><span class="icon-arrow-left"></span><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts</a></p>
       {% endif %}
 
       {% if paginator.next_page %}
-        <p class="col-1-2 new-arrow"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts</a></p>
+        <p class="col-1-2 new-arrow"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts</a><span class="icon-arrow-right"></span></p>
       {% endif %}
     {% endif %}
     

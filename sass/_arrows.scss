@@ -7,12 +7,26 @@
   }
   p {
     margin-bottom: 0;
+    &.new-arrow {
+      a {
+        padding-right: 5px;
+      }
+    }
+    &.old-arrow {
+      a {
+        padding-left: 5px;
+      }
+    }
   }
   a {
     text-decoration: none;
     @include font-size(1.2);
     @include font(sans);
+    color: $dark-blue;
     @include blue-hover;
     @include link-transition;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
