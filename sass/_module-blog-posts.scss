@@ -62,7 +62,7 @@
     margin: 1rem 0 0 0;
   }
 
-  h3, p, ul, ol, figure, figcaption, cite {
+  h3, p, ul, ol, figure, figcaption, cite, .continue-reading {
     line-height: 1.6;
     @include font-size(1.1);
 
@@ -88,5 +88,15 @@
         font-style: italic;
       }
     }
+
+  .continue-reading {
+    display: block;
+    text-align: right;
+    @include font(sans-it);
+    color: $dark-blue;
+    text-decoration: underline;
+    @include blue-hover;
+    @include link-transition;
+  }
 
 }

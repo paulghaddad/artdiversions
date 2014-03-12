@@ -23,6 +23,11 @@
     font-style: normal;
     font-weight: 700;
   }
+  @else if $font == sans-it {
+    font-family: "europa",sans-serif;
+    font-style: italic;
+    font-weight: 400;
+  }
   @else if $font == sans {
     font-family: "europa",sans-serif;
     font-style: normal;
