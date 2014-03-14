@@ -27,10 +27,9 @@
         @include link-transition;
       }
 
-    @include bp(gamma) {
+    @include bp(beta) {
       margin: 0 auto;
-      width: 70%;
-      text-align: center;
+      width: 60%;
     }
   }
   
