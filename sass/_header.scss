@@ -13,13 +13,22 @@
 
   h1 {
     @include image-replacement-text;
+    background: url(../../img/picture1.png) no-repeat;
+    background-size: 250px 90px;
+    width: 250px;
+    height: 90px;
+    //position: absolute;
+    //right: 0;
+    margin: 0 auto;
   }
 
   h2 {
     display: inline-block;
-    margin: 0;
+    margin: 1em auto;
+    width: 100%;
     @include font(sans);
     @include font-size(1);
+    text-align: center;
       a {
         color: $dark-blue;
         text-decoration: underline;
@@ -28,8 +37,7 @@
       }
 
     @include bp(beta) {
-      margin: 0 auto;
-      width: 60%;
+      //width: 60%;
     }
   }
   

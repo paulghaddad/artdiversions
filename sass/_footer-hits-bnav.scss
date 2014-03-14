@@ -11,7 +11,7 @@ footer {
 
     p {
       @include font-size(1.1);
-      @include border;
+      @include border-bottom;
       padding-bottom: .8rem;
       span{
         font-weight: bold;

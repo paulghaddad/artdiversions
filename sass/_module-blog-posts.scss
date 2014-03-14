@@ -1,6 +1,7 @@
 .post {
 
-  @include border;
+  @include border-bottom;
+  @include border-top;
   padding-bottom: $pad*4;
 
   h1 {
