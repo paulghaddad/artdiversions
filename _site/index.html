@@ -11,7 +11,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="/css/build/main.css">
-    <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="/js/vendor/modernizr.custom.61407.js"></script>
 
     <script type="text/javascript">
       (function(d) {
@@ -220,6 +220,10 @@
         {
           test: Modernizr.mq('only all'),
           nope: '/bower_components/respond/dest/respond.min.js'
+        },
+        {
+          test: Modernizr.cssremunit,
+          nope: '/bower_components/REM-unit-polyfill/js/rem.min.js'
         }
         ]);
 
