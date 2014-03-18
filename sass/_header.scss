@@ -13,7 +13,7 @@
 
   h1 {
     @include image-replacement-text;
-    background: url(../../img/logo_1.png) no-repeat;
+    background: url(../../img/built/logo_1.png) no-repeat;
     margin: 0 auto;
     background-size: 250px 90px;
     width: 250px;
@@ -36,7 +36,6 @@
       width: 400px;
       height: 143px;
     }
-    
   }
 
   h2 {
@@ -60,14 +59,8 @@
   
   span {
     display: none;
-    @include bp(beta) {
+    @include bp(delta) {
       display: inline;
-    }
-
-    &.media-alpha {
-      @include bp(alpha) {
-        display: inline;
-      }
     }
 
     &.media-beta {
@@ -76,8 +69,12 @@
       }
     }
 
+    &.media-delta {
+      @include bp(gamma) {
+        display: inline;
+      }
+    }
   }
-
 }
 
 
