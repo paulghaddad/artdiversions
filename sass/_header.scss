@@ -62,6 +62,20 @@
     @include bp(delta) {
       display: inline;
     }
+    
+    &.capitalize {
+      text-transform: capitalize;
+      display: inline;
+      @include bp(alpha) {
+        text-transform: none;
+      }
+    }
+    
+    &.media-alpha {
+      @include bp(alpha) {
+        display: inline;
+      }
+    }
 
     &.media-beta {
       @include bp(beta) {
