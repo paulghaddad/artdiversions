@@ -233,10 +233,10 @@ textarea {
 
 @media print {
     * {
-        background: transparent;
-        color: #000; /* Black prints faster: h5bp.com/s */
-        box-shadow: none;
-        text-shadow: none;
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
 
     a,
@@ -278,7 +278,7 @@ textarea {
     }
 
     img {
-        max-width: 100%;
+        max-width: 100% !important;
     }
 
     @page {
