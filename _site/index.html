@@ -217,10 +217,12 @@
 
       <script>
 
-        Modernizr.load({
-          test: Modernizr.mq('only all'),
-          nope: '/bower_components/respond/dest/respond.min.js'
-        });
+        Modernizr.load([
+        {
+          test : Modernizr.mq('only all'),
+          nope : '/bower_components/respond/dest/respond.min.js'
+        }
+        ]);
 
       </script>
 
