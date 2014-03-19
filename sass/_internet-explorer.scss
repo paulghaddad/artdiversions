@@ -30,7 +30,7 @@
 }
 
 
-  nav {
+nav {
 
     ul {
       padding: $pad/2 0;
@@ -83,7 +83,7 @@ footer {
 }
 
 .post {
-
+  border-bottom: none;
   padding-bottom: $pad*4;
 
   h1 {
@@ -130,6 +130,11 @@ footer {
     padding-left: 1.5em;
   }
 
+}
+
+// Add bottom border to last blog post on a page
+.ie-border {
+  @include border-bottom;
 }
 
 .arrows {
