@@ -1,7 +1,7 @@
 name: ArtDiversions
 markdown: redcarpet
 pygments: true
-baseurl: /
+baseurl: www.artdiversions.com/
 
 paginate_path: "/page:num"
 paginate: 4
