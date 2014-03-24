@@ -4,10 +4,10 @@
     padding: 1rem 0;
 }
 
-@mixin blue-hover {
+@mixin charcoal-hover {
   &:hover {
     text-decoration: none;
-    color: $hover-blue;
+    color: $hover-charcoal;
   }
 }
 
