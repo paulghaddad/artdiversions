@@ -1,18 +1,18 @@
 .arrows {
   padding: $pad*1.5 0 0 0;
   
-.new-arrow {
+.old-arrow {
     float: right;
     text-align: right;
   }
   p {
     margin-bottom: 0;
-    &.new-arrow {
+    &.old-arrow {
       a {
         padding-right: 5px;
       }
     }
-    &.old-arrow {
+    &.new-arrow {
       a {
         padding-left: 5px;
       }
@@ -22,8 +22,12 @@
     text-decoration: none;
     @include font-size(1.2);
     @include font(sans);
-    color: $dark-charcoal;
-    @include charcoal-hover;
+    color: $dark-red;
+      &:hover {
+        color: $hover-red;
+        text-decoration: underline;
+        @include link-transition;
+      }
     @include link-transition;
     &:hover {
       text-decoration: underline;
