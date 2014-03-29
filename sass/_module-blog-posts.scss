@@ -105,10 +105,9 @@
     text-align: right;
     @include font(sans-it);
     color: $dark-red;
-    text-decoration: underline;
     &:hover {
         color: $hover-red;
-        text-decoration: none;
+        text-decoration: underline;
         @include link-transition;
       }
     @include link-transition;

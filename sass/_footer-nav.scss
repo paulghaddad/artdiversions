@@ -48,11 +48,11 @@ footer {
 
   .footer-bottom {
     a {
-      color: $dark-charcoal;
+      color: $dark-red;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
-        color: $hover-charcoal;
+        color: $hover-red;
         @include link-transition;
       }
     }

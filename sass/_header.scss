@@ -47,7 +47,6 @@
     text-align: center;
       a {
         color: $dark-charcoal;
-        text-decoration: underline;
         @include charcoal-hover;
         @include link-transition;
       }
@@ -72,6 +71,11 @@
     }
     
     &.media-alpha {
+      color: $dark-red;
+      &:hover {
+        color: $hover-red;
+        text-decoration: underline;
+      }
       @include bp(alpha) {
         display: inline;
       }
@@ -88,6 +92,14 @@
         display: inline;
       }
     }
+    &.header-link {
+      color: $dark-red;
+      &:hover {
+        color: $hover-red;
+        text-decoration: underline;
+      }
+    }
+
   }
 }
 
