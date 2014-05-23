@@ -3,7 +3,9 @@ artdiversions
 
 ## Purpose
 
-This site is a blog about contemporary art for my wife. 
+This site is a blog about contemporary art for my wife, ArtDiversions. Please visit the site at:
+
+http://www.artdiversions.com/
 
 ## How it was built
 
