@@ -1,11 +1,11 @@
 artdiversions
 =============
 
-# Purpose
+## Purpose
 
 This site is a blog about contemporary art for my wife. 
 
-# How it was built
+## How it was built
 
 Jekyll, a static-site generator built in Ruby, was used to create the functionality of the blog. The HTML, CSS and Javascript were written starting from my personal framework: 
 
