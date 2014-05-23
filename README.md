@@ -14,7 +14,7 @@ https://github.com/paulh16/pgh_framework
 Other tools used to build the site are:
 
 * Bower
-* Respond.js for media queries for IE 8
+* Respond.js for media queries in Internet Explorer 8
 * SASS
 * Grunt
 * Modernizr
