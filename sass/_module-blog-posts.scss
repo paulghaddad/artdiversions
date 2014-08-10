@@ -70,6 +70,11 @@
     margin: 1rem 0 0 0;
   }
 
+  .small-latin-c {
+    @include font-size(1);
+  }
+  
+
   h3, p, ul, ol, figure, figcaption, cite, .continue-reading {
     line-height: 1.6;
     @include font-size(1.1);
