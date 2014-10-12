@@ -7,5 +7,5 @@ _site/
 node_modules/
 css/.DS_Store
 image_work/
-img/build/
+img/built/
 img/prebuild/
