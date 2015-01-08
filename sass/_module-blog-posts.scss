@@ -48,6 +48,17 @@
 
   p {
     text-indent: 1.5rem;
+    a {
+      color: $dark-red;
+      &:hover {
+        color: $hover-red;
+        text-decoration: underline;
+        @include link-transition;
+      }
+      &:visited {
+        color: $charcoal;
+      }
+    }
   }
 
   .no-indent {
