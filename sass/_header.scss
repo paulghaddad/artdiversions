@@ -55,6 +55,20 @@
       //width: 60%;
     }
   }
+
+  .email-signup {
+    @include font(sans-bold);
+    text-align: center;
+    @include font-size(1.1);
+
+    a {
+      color: $dark-red;
+      &:hover {
+        color: $hover-red;
+        text-decoration: underline;
+      }
+    }
+  }
   
   span {
     display: none;
