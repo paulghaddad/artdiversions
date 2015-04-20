@@ -1,4 +1,4 @@
-p:last-of-type {
+.newsletter p:last-of-type {
   @include font(sans);
   text-align: center;
   @include font-size(1.1);
