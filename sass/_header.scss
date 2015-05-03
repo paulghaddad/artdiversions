@@ -43,7 +43,7 @@
     margin: 1em auto;
     width: 100%;
     @include font(sans);
-    @include font-size(1);
+    @include font-size(1.1);
     text-align: center;
       a {
         color: $dark-charcoal;
@@ -53,20 +53,6 @@
 
     @include bp(beta) {
       //width: 60%;
-    }
-  }
-
-  .email-signup {
-    @include font(sans-bold);
-    text-align: center;
-    @include font-size(1.1);
-
-    a {
-      color: $dark-red;
-      &:hover {
-        color: $hover-red;
-        text-decoration: underline;
-      }
     }
   }
   
@@ -106,14 +92,6 @@
         display: inline;
       }
     }
-    &.header-link {
-      color: $dark-red;
-      &:hover {
-        color: $hover-red;
-        text-decoration: underline;
-      }
-    }
-
   }
 }
 
