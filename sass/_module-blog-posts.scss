@@ -107,6 +107,10 @@
         @include font-size(1.1);
         @include link-styles;
         text-align: center;
+
+        &.small-font {
+          @include font-size(1);
+        }
       }
     }
 
